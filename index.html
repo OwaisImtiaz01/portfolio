@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owais Imtiaz | Software Engineer Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            primary: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            },
+            accent: {
+              cyan: '#06b6d4',
+              blue: '#3b82f6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(52, 211, 153, 0.3);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #34d399 0%, #06b6d4 50%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glow-bg {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15), transparent 60%);
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-200 font-sans selection:bg-emerald-500 selection:text-black min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Glow Background -->
+  <div class="fixed inset-0 glow-bg pointer-events-none z-0"></div>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-extrabold tracking-tight flex items-center gap-2 group">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 text-slate-950 font-mono font-black flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">OI</span>
+        <span class="text-white group-hover:text-emerald-400 transition-colors">Owais<span class="text-emerald-400">.dev</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+        <a href="#fyp" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>Featured Project</a>
+        <a href="#projects" class="hover:text-emerald-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-emerald-400 transition-colors">Skills</a>
+        <a href="#education" class="hover:text-emerald-400 transition-colors">Education</a>
+        <a href="#certifications" class="hover:text-emerald-400 transition-colors">Certifications</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider rounded-xl bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-slate-950 border border-emerald-500/30 transition-all duration-300">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-24">
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-[88vh] flex items-center justify-center px-6 py-12">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Status badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-medium mb-8 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          8th Semester Software Engineering Student | Seeking Internship
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+          Hi, I'm <span class="gradient-text">Owais Imtiaz</span>
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+          Passionate software engineering student at <span class="text-slate-200 font-medium">Ziauddin University (CGPA 3.37)</span> specializing in full-stack development, Python tooling, AI computer vision integration, and database systems.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#fyp" class="px-7 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm tracking-wide transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2 group">
+            <span>Explore Final Year Project</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/owais-imtiaz-571ba0311/" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-all flex items-center gap-2">
+            <i class="fa-brands fa-linkedin text-blue-400"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="mailto:owaisimtiaz02@gmail.com?subject=Job%20Opportunity%20%2F%20Inquiry%20-%20Owais%20Imtiaz" class="px-7 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-semibold text-sm border border-slate-800 transition-all flex items-center gap-2">
+            <i class="fa-regular fa-envelope text-emerald-400"></i>
+            <span>Email Me</span>
+          </a>
+        </div>
+
+        <!-- Quick stats / Highlights -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 max-w-3xl mx-auto pt-8 border-t border-slate-800/60">
+          <div class="text-center p-3">
+            <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">3.37</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Current CGPA</div>
+          </div>
+          <div class="text-center p-3">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">8th</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Semester BS-SE</div>
+          </div>
+          <div class="text-center p-3">
+            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">6+</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Core Projects</div>
+          </div>
+          <div class="text-center p-3">
+            <div class="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono">5+</div>
+            <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Certifications</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="h-px w-8 bg-emerald-500"></span>
+        <h2 class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">About Me</h2>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7 space-y-5 text-slate-300 leading-relaxed text-base">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white">
+            Engineering software solutions with clean architecture and modern technology.
+          </h3>
+          <p>
+            I am an undergraduate Software Engineering student in my final semester at Ziauddin University, Karachi. Driven by a deep interest in practical software design, I have built multiple applications spanning secure local web file sharing, enterprise ERD & SQL systems, network architectures, and cryptographic utilities.
+          </p>
+          <p>
+            Currently, I am working on my capstone project: an AI-driven agricultural mobile and REST backend ecosystem that detects cotton leaf diseases using Vision Transformers and provides tailored remedy suggestions to farmers.
+          </p>
+          <p class="text-slate-400 text-sm">
+            I am actively looking for an <strong class="text-emerald-400 font-semibold">internship or junior software engineering role</strong> where I can collaborate with talented engineering teams, contribute reliable code, and solve meaningful real-world challenges.
+          </p>
+        </div>
+
+        <div class="md:col-span-5 glass-card p-6 rounded-2xl space-y-4">
+          <h4 class="text-sm font-mono uppercase tracking-wider text-slate-400 font-semibold pb-2 border-b border-slate-800">
+            Contact & Details
+          </h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-emerald-400 mt-1"></i>
+              <div>
+                <span class="text-xs text-slate-500 block uppercase">Location</span>
+                <span class="text-slate-200">North Nazimabad, Karachi, Pakistan</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-emerald-400 mt-1"></i>
+              <div>
+                <span class="text-xs text-slate-500 block uppercase">Email</span>
+                <a href="mailto:owaisimtiaz02@gmail.com" class="text-slate-200 hover:text-emerald-400 transition-colors">owaisimtiaz02@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-emerald-400 mt-1"></i>
+              <div>
+                <span class="text-xs text-slate-500 block uppercase">Phone</span>
+                <span class="text-slate-200 font-mono">0313-2904596</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-brands fa-linkedin text-emerald-400 mt-1"></i>
+              <div>
+                <span class="text-xs text-slate-500 block uppercase">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/owais-imtiaz-571ba0311/" target="_blank" class="text-slate-200 hover:text-emerald-400 transition-colors">owais-imtiaz-571ba0311</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FYP Showcase Section -->
+    <section id="fyp" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-8 bg-emerald-500"></span>
+        <h2 class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">Capstone Project</h2>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-emerald-500/20 shadow-2xl">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-semibold tracking-wide uppercase">
+              <i class="fa-solid fa-seedling"></i> Final Year Project (In Progress)
+            </div>
+
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+              Automated Cotton Disease Detection & Remedy Suggestion System
+            </h3>
+
+            <p class="text-slate-300 leading-relaxed text-base">
+              An AI-assisted agricultural application featuring a cross-platform <strong>Flutter</strong> mobile frontend and a <strong>Python Flask REST backend</strong>. The system allows users to capture or upload cotton leaf images, connects to a Roboflow-hosted computer vision workflow to detect major disease classes with confidence scores, and provides farmers with actionable remedy suggestions and preventive guidelines.
+            </p>
+
+            <!-- Detected Classes Pill List -->
+            <div>
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-2 font-medium">Diseases Identified:</span>
+              <div class="flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-3 py-1 bg-slate-900 border border-slate-700/70 rounded-md text-emerald-300"><i class="fa-regular fa-circle-check mr-1.5 text-emerald-400"></i>Healthy Leaf</span>
+                <span class="px-3 py-1 bg-slate-900 border border-slate-700/70 rounded-md text-red-300"><i class="fa-solid fa-triangle-exclamation mr-1.5 text-red-400"></i>CLCuV (Leaf Curl Virus)</span>
+                <span class="px-3 py-1 bg-slate-900 border border-slate-700/70 rounded-md text-amber-300"><i class="fa-solid fa-biohazard mr-1.5 text-amber-400"></i>Bacterial Blight</span>
+                <span class="px-3 py-1 bg-slate-900 border border-slate-700/70 rounded-md text-orange-300"><i class="fa-solid fa-virus mr-1.5 text-orange-400"></i>Boll Rot</span>
+              </div>
+            </div>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/30">Flutter</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-yellow-500/10 text-yellow-400 border border-yellow-500/30">Python</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-slate-700/30 text-slate-300 border border-slate-700">Flask REST API</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/30">Roboflow API</span>
+              <span class="px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Vision Transformers</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-4">
+            <h4 class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">System Architecture</h4>
+            <div class="space-y-3 text-xs text-slate-300 font-mono">
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <div class="text-white font-bold mb-1 flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-cyan-400"></i> Mobile Client</div>
+                <div class="text-slate-400">Flutter app for camera capture, gallery upload, and localized remedy advice.</div>
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <div class="text-white font-bold mb-1 flex items-center gap-2"><i class="fa-solid fa-server text-emerald-400"></i> Flask Backend</div>
+                <div class="text-slate-400">RESTful image preprocessing, validation, pipeline dispatch, and database logging.</div>
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <div class="text-white font-bold mb-1 flex items-center gap-2"><i class="fa-solid fa-brain text-purple-400"></i> AI Inference</div>
+                <div class="text-slate-400">Roboflow Computer Vision pipeline powered by Vision Transformers with confidence scores.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="h-px w-8 bg-emerald-500"></span>
+        <h2 class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">Other Featured Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1: File Sharing Web App -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">File Sharing Web App</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              A local file-sharing web application inspired by AirForShare featuring custom link expiry, password protection, and seamless local device transfer.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Web App</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Security</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Local Network</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Secure File Encryption Tool -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Secure File Encryption Tool</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              A command-line/desktop security utility written in Python utilizing military-grade AES-256-GCM encryption with authenticated tag verification for tamper-proof data storage.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-emerald-400">Python</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">AES-256-GCM</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Cryptography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Leads Management System -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Leads Management Database</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              End-to-end database engineering project. Authored comprehensive Entity-Relationship Diagrams (ERD), normalized schemas, multi-table joins, stored procedures, and automated triggers.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-purple-300">SQL</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">ERD Design</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Triggers & Stored Procs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Hospital Management System Network Design -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Hospital Network Infrastructure</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Simulated and architected hospital multi-department network topologies in Cisco Packet Tracer, incorporating IP subnetting, VLAN segmentation, router configurations, and failover design.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-blue-300">Cisco Packet Tracer</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Network Topologies</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Subnetting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Healthcare Solution Frontend -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-rose-300 transition-colors">Healthcare Solution Front-End</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              Created accessible, patient-centered UI mockups and functional front-end interfaces for healthcare record viewing and appointment workflows using HTML5, CSS3, and modern JavaScript.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-rose-300">HTML5</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">CSS3</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Online Banking App UI/UX -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-mobile-button"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Online Banking UI/UX Design</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              User research and interface prototyping starting from low-fidelity paper wireframes to polished high-fidelity interactive prototypes in Figma for a seamless digital banking experience.
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-amber-300">Figma</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">Wireframing</span>
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300">UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="h-px w-8 bg-emerald-500"></span>
+        <h2 class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">Technical Arsenal</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Programming -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-code text-emerald-400 text-lg"></i>
+            <h3 class="font-bold text-white">Programming Languages</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Python</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">C++</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">C</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Web & Mobile Development -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-layer-group text-cyan-400 text-lg"></i>
+            <h3 class="font-bold text-white">Web & Mobile Dev</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">HTML5</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">CSS3</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Flask (REST API)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Flutter</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-database text-purple-400 text-lg"></i>
+            <h3 class="font-bold text-white">Database & Architecture</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">SQL</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">ERD Modeling</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Normalization</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Triggers & Procedures</span>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-screwdriver-wrench text-amber-400 text-lg"></i>
+            <h3 class="font-bold text-white">Tools & Software</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">VS Code</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Figma</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Cisco Packet Tracer</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Code::Blocks</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Linux CLI</span>
+          </div>
+        </div>
+
+        <!-- Software Engineering Concepts -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-cubes text-blue-400 text-lg"></i>
+            <h3 class="font-bold text-white">Concepts & Practices</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Object Oriented Programming</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">SDLC</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Agile (Scrum)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Data Structures</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-users text-rose-400 text-lg"></i>
+            <h3 class="font-bold text-white">Professional & Soft Skills</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Problem-Solving</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Team Collaboration</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Clear Communication</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-200">Time Management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section id="education" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-10">
+        <span class="h-px w-8 bg-emerald-500"></span>
+        <h2 class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">Education</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- University -->
+        <div class="glass-card p-6 sm:p-8 rounded-2xl relative border-l-4 border-l-emerald-400">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+            <h3 class="text-lg sm:text-xl font-bold text-white">
+              Bachelor of Science in Software Engineering (BS-SE)
+            </h3>
+            <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 w-fit">
+              Present (8th Semester)
+            </span>
+          </div>
+          <p class="text-emerald-400 font-medium text-sm mb-2">
+            Ziauddin University Faculty of Engineering, Science, Technology & Management
+          </p>
+          <div class="flex items-center gap-4 text-xs font-mono text-slate-400">
+            <span><strong class="text-white">Current CGPA:</strong> 3.37 / 4.0</span>
+            <span>&bull;</span>
+            <span>Karachi, Pakistan</span>
+          </div>
+        </div>
+
+        <!-- Intermediate -->
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-cyan-400">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+            <h3 class="text-lg font-bold text-white">Intermediate (Pre-Engineering)</h3>
+            <span class="text-xs font-mono text-slate-400">Completed 2022</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-2">Jinnah Government College Nazimabad, Karachi</p>
+          <span class="text-xs font-mono text-slate-400">Grade C</span>
+        </div>
+
+        <!-- Matriculation -->
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-slate-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+            <h3 class="text-lg font-bold text-white">Matriculation (Science)</h3>
+            <span class="text-xs font-mono text-slate-400">Completed 2020</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-2">Universal Grammar Secondary School</p>
+          <span class="text-xs font-mono text-emerald-400 font-semibold">Grade A</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 px-6 max-w-6xl mx-auto">
+      <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center gap-3">
+          <span class="h-px w-8 bg-emerald-500"></span>
+          <h2 class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">Certifications</h2>
+        </div>
+        <span class="text-xs font-mono text-slate-400 hidden sm:inline-flex items-center gap-1.5">
+          <i class="fa-regular fa-file-pdf text-emerald-400"></i> Click card to view certificate PDF
+        </span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Python for Beginners -->
+        <a href="certificates/python-for-beginners-simplilearn.pdf" target="_blank" rel="noopener noreferrer" class="glass-card p-5 rounded-2xl flex items-center justify-between gap-4 group hover:border-emerald-500/50 hover:bg-slate-800/60 transition-all duration-300">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-python text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm group-hover:text-emerald-300 transition-colors">Python for Beginners</h4>
+              <p class="text-xs text-slate-400">Simplilearn &bull; Code: 8320146</p>
+            </div>
+          </div>
+          <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-emerald-400 group-hover:border-emerald-500/40 shrink-0 transition-colors">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </span>
+        </a>
+
+        <!-- Introduction to SQL -->
+        <a href="certificates/sql-simplilearn.pdf" target="_blank" rel="noopener noreferrer" class="glass-card p-5 rounded-2xl flex items-center justify-between gap-4 group hover:border-purple-500/50 hover:bg-slate-800/60 transition-all duration-300">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-database text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm group-hover:text-purple-300 transition-colors">Introduction to SQL</h4>
+              <p class="text-xs text-slate-400">Simplilearn &bull; Code: 7605091</p>
+            </div>
+          </div>
+          <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-purple-400 group-hover:border-purple-500/40 shrink-0 transition-colors">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </span>
+        </a>
+
+        <!-- Data Structures (Coursera) -->
+        <a href="certificates/data-structures-coursera.pdf" target="_blank" rel="noopener noreferrer" class="glass-card p-5 rounded-2xl flex items-center justify-between gap-4 group hover:border-blue-500/50 hover:bg-slate-800/60 transition-all duration-300">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-diagram-project text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm group-hover:text-blue-300 transition-colors">Data Structures</h4>
+              <p class="text-xs text-slate-400">UC San Diego / Coursera</p>
+            </div>
+          </div>
+          <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:border-blue-500/40 shrink-0 transition-colors">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </span>
+        </a>
+
+        <!-- Linux Tutorial -->
+        <a href="certificates/linux-tutorial-great-learning.pdf" target="_blank" rel="noopener noreferrer" class="glass-card p-5 rounded-2xl flex items-center justify-between gap-4 group hover:border-amber-500/50 hover:bg-slate-800/60 transition-all duration-300">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-linux text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm group-hover:text-amber-300 transition-colors">Linux Tutorial</h4>
+              <p class="text-xs text-slate-400">Great Learning Academy</p>
+            </div>
+          </div>
+          <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-amber-400 group-hover:border-amber-500/40 shrink-0 transition-colors">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </span>
+        </a>
+
+        <!-- Basics of HTML/CSS -->
+        <a href="certificates/html-css-openweaver.pdf" target="_blank" rel="noopener noreferrer" class="glass-card p-5 rounded-2xl flex items-center justify-between gap-4 group hover:border-rose-500/50 hover:bg-slate-800/60 transition-all duration-300">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-html5 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm group-hover:text-rose-300 transition-colors">Basics of HTML/CSS</h4>
+              <p class="text-xs text-slate-400">OpenWeaver &bull; ID: 95870153252427</p>
+            </div>
+          </div>
+          <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-700/80 flex items-center justify-center text-slate-400 group-hover:text-rose-400 group-hover:border-rose-500/40 shrink-0 transition-colors">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="py-24 px-6 max-w-6xl mx-auto border-t border-slate-800/80">
+      <div class="text-center max-w-2xl mx-auto space-y-6">
+        <span class="text-xs font-mono font-bold tracking-widest text-emerald-400 uppercase">Let's Connect</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Ready to collaborate?</h2>
+        <p class="text-slate-400 text-base leading-relaxed">
+          I'm currently looking for an internship in software engineering. Whether you have an opportunity or just want to chat about tech, my inbox is always open.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="mailto:owaisimtiaz02@gmail.com?subject=Job%20Opportunity%20%2F%20Inquiry%20-%20Owais%20Imtiaz&body=Hi%20Owais%2C%0A%0AI%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0ABest%20regards%2C" class="px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm tracking-wide transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Send Email (owaisimtiaz02@gmail.com)</span>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=owaisimtiaz02@gmail.com&su=Job+Opportunity+/+Inquiry+-+Owais+Imtiaz" target="_blank" rel="noopener noreferrer" class="px-5 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white font-semibold text-xs tracking-wide transition-all flex items-center gap-2">
+            <i class="fa-brands fa-google text-red-400"></i>
+            <span>Open in Gmail</span>
+          </a>
+          <a href="https://www.linkedin.com/in/owais-imtiaz-571ba0311/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-sm transition-all flex items-center gap-2">
+            <i class="fa-brands fa-linkedin text-blue-400"></i>
+            <span>Connect on LinkedIn</span>
+          </a>
+        </div>
+
+        <div class="pt-16 text-xs text-slate-500 font-mono flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800/60 mt-12">
+          <span>&copy; 2026 Owais Imtiaz. All rights reserved.</span>
+          <span class="flex items-center gap-2">
+            Designed & Developed with <i class="fa-solid fa-heart text-red-500"></i> in Karachi
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
